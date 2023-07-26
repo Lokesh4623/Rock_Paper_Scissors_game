@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>calci</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/cal2.css') }}">
+    </head>
+    <body>
+        <h1>ROCK PAPER SCISSORS GAME</h1>
+        <form name="check" action="{{ url_for('predict')}}" method="post">
+		<center>
+		<div class='left'>
+			<input class='txt' type='text' name='val'><br>
+			CLICK YOUR CHOICE:<br>
+			<input class='but'type='button' value='ROCK' onclick='check.val.value="ROCK"'><br>
+			<input class='but' type='button' value='PAPER' onclick='check.val.value="PAPER"'><br>
+			<input class='but' type='button' value='SCISSORS' onclick='check.val.value="SCISSORS"'><br>
+	  		<button id='play'>Play</button><br><br>
+		</div>
+		</center>
+		<center>
+		<div class='right'>
+			USER INPUT:<div class="txt" name="usertxt">{{user_text}}<div><br>
+			COMPUTER INPUT:<div class="txt" name="comptxt">{{computer_text}}<div><br>
+			RESULT:<div class='txt' name="res">{{result_text}}<div><br>
+		</div>
+		</center>
+        </form>
+        <br>
+        <br>
+   </body>
+</html>
